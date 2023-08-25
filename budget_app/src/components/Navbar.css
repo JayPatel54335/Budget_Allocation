@@ -29,6 +29,23 @@ nav {
     background:crimson;
     color:#4db5ff;
   }
+
+  @media screen and (max-width: 1333px){
+    nav{
+      top: 1%;
+     
+    }
+  }
+  @media screen and (max-width: 474px){
+    nav{      
+      position: relative;
+     
+    }
+    .navcolor{
+      background-color: #F1F6F9;
+    }
+  }
+
   @media print {
     nav{
         display: none;

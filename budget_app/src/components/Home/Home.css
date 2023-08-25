@@ -227,11 +227,19 @@
 
 @media screen and (max-width: 1333px) {
     .foo {
-        display: grid;
-        justify-content: center;
-    }
-    .address{
+        display: grid;              
+    }    
+    .aboutop, .dev, .address{
+        width: 300px;
         border-left: none;
-        border-right: 2px solid black;
+        border-right: none;
+        place-items: center;
+        text-align: center;
+        margin-bottom: 10%;        
+        
     }
+    .foo p, .addd{
+        padding-bottom: 2%;
+    }
+   
 }

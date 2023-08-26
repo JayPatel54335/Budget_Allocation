@@ -1,43 +1,39 @@
 .tb{
     color: #212A3E;
   }
-  .bg{
-    background-color: #9BA4B5;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-  }
+  
   .mainb {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      border-radius: 10px;
-    }
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    border-radius: 10px;
+  }
   
-    .titelb {
-      font-size: 2.15rem;
-      font-weight: 600;
-    }
+  .titelb {
+    font-size: 2.15rem;
+    font-weight: 600;
+  }
   
-    .mainc {
-      margin-top: 2.5%;
-      display: grid;
-      justify-content: center;
-      gap: 20px;
-    }
+  .mainc {
+    margin-top: 2.5%;
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+  }
   
   
   
-    .add-budget {
+  .add-budget {
+    background-color: #9BA4B5;
       border-radius: 4px;
       margin-left: 6.1%;
-      width: 83.3%;
+      /* 4.7 */
+      width: 83%;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       padding: 20px;
-      background-color: #f2f2f2;
+     
     }
     .add-budget input[type="text"],
     .add-budget input[type="number"],
@@ -87,9 +83,40 @@
       .add-budget select {
         width: calc(33% - 8px);
       }
+    }    
+    @media screen and ( max-width: 889px){     
+      .mainb{
+        padding-top: 10%;
+      }
     }
+
+          @media screen and (max-width: 777px){
+           .mainc{
+            justify-content: center;
+           }
+            .add-budget{
+              padding: 2%;
+              margin-left: 0%;
+              display: grid;
+              justify-self: center;
+              width: max-content;
+            }
+            .add-budget input[type="text"],
+    .add-budget input[type="number"],
+    .add-budget input[type="date"],
+    .add-budget select{
+      width: 90%;
+      
+    }
+}
+
+@media screen and (max-width: 316px){
+  .tb{
+    width: 100vh;
+  }
+}
   
-  
+
   
   
     /* Hide "Add Budget" section during print */

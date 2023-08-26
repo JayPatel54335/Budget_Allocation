@@ -36,14 +36,11 @@ nav {
      
     }
   }
-  @media screen and (max-width: 474px){
-    nav{      
-      position: relative;
-     
-    }
-    .navcolor{
-      background-color: #F1F6F9;
-    }
+  @media screen and (max-width: 721px){
+    nav {      
+      display: none;
+    }  
+    
   }
 
   @media print {

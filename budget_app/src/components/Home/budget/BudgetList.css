@@ -57,7 +57,7 @@ td {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 884px) {
 
     /* On smaller screens, reduce padding for table cells */
     td {
@@ -66,11 +66,39 @@ td {
 
     /* Adjust width and height of the "Remove" button */
     .rem {
-        width: 83%;
-        height: 25px;
-        font-size: 13px;
+        padding: 1%;
+        width: 95%;
+        height: 22px;
+        font-size: 12px;
     }
 }
+@media screen and (max-width: 276px) {
+    .card {
+      width: 100%;
+    }
+    table th,
+    table td {
+      padding: 6px;
+    }
+    .rem {
+      width: 91%;
+      height: 20px;
+      font-size: 11px;
+    }
+  }
+
+  @media screen and (max-width: 427px){
+    .card{
+        width: 98%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    table th,
+    table td {
+      padding: 4px;
+    }
+  }
+
 
 
 

@@ -3,7 +3,9 @@ import './Budget.css';
 // import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
 import BudgetList from './BudgetList';
-import { FaPrint } from 'react-icons/fa';
+import { FaPrint, FaHome } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+
 const Budget = () => {
   const [budgets, setBudgets] = useState([]);
   const [title, setTitle] = useState('');
@@ -94,7 +96,8 @@ const Budget = () => {
           </div>
           <BudgetList budgets={budgets} currency={currency} onRemove={removeBudget} selectedDate={selectedDate}/>
         </div>
-        <div className='foot'>Thanks for using Budget Allocation App </div>
+        <div className='foot'>Thanks for using Budget Allocation App<br/> 
+        <span> Click home to return <b>Home page.</b> <br/> <Link to='/' className='a active'><FaHome/></Link></span></div>
       </div>
     </div>
   )

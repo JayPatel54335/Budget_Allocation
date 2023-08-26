@@ -243,3 +243,17 @@
     }
    
 }
+@media screen and (max-width: 276px){
+    .main{
+        width: 250px;     
+        padding-right: 10%;
+        text-align: center;
+    }
+    .foo,.aboutop, .dev, .address{
+        width: 250px;
+        padding-left: 10%;
+        padding-right: 13%;
+        margin-right: 0%;
+        text-align: center;
+    }
+}

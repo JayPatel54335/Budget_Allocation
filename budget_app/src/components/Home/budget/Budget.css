@@ -1,39 +1,32 @@
 .tb{
     color: #212A3E;
-  }
-  
+  }  
   .mainb {
     font-family: Arial, sans-serif;
     padding: 20px;
     border-radius: 10px;
-  }
-  
+  }  
   .titelb {
     font-size: 2.15rem;
     font-weight: 600;
-  }
-  
+  }  
   .mainc {
     margin-top: 2.5%;
     display: grid;
     justify-content: center;
     gap: 20px;
-  }
-  
-  
-  
+  }  
   .add-budget {
     background-color: #9BA4B5;
       border-radius: 4px;
-      margin-left: 6.1%;
+      /* margin-left: 6.1%; */
       /* 4.7 */
-      width: 83%;
+      width: max-content;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      padding: 20px;
-     
+      padding: 20px;     
     }
     .add-budget input[type="text"],
     .add-budget input[type="number"],
@@ -55,16 +48,11 @@
       border-radius: 4px;
       font-size: 16px;
       width: 150px;
-      height: 37px;
-  
-    }
-  
+      height: 37px;  
+    }  
     .pri {
       margin-left: 1%;
-    }
-  
-  
-  
+    } 
     .foot{
       margin-top: 5%;
       text-align: center;
@@ -74,58 +62,68 @@
     .foot:hover{
       color:#272829;
       text-shadow: 0px 3px 4px  whitesmoke;
+    }  
+
+    .extra{
+      
     }
-  
-    @media screen and (min-width: 768px) {
-      /* On larger screens, display the form elements side by side */
+    /* @media screen and (min-width: 768px) {     
       .add-budget input[type="text"],
       .add-budget input[type="number"],
       .add-budget select {
         width: calc(33% - 8px);
       }
-    }    
+    }     */
     @media screen and ( max-width: 889px){     
       .mainb{
         padding-top: 10%;
       }
+      .tb{
+        
+      }
     }
-
           @media screen and (max-width: 777px){
            .mainc{
             justify-content: center;
            }
             .add-budget{
-              padding: 2%;
-              margin-left: 0%;
+              padding: 2% 5%;              
               display: grid;
               justify-self: center;
               width: max-content;
             }
+            .add-budget{
+              width: max-content;
+            }
             .add-budget input[type="text"],
-    .add-budget input[type="number"],
-    .add-budget input[type="date"],
-    .add-budget select{
-      width: 90%;
+            .add-budget input[type="number"],
+            .add-budget input[type="date"],
+            .add-budget select{
+      justify-self: center;
+      width: 100%;
       
     }
+    .pri{
+      margin-top: 2%;
+    }
 }
-
-@media screen and (max-width: 316px){
+/* @media screen and (max-width: 316px){
   .tb{
     width: 100vh;
   }
-}
-  
-
-  
-  
-    /* Hide "Add Budget" section during print */
+  .pri{
+    margin-top: 1%;
+  }
+}      */
     @media print {
       .add-budget {
         display: none;
       }
       .titelb{
           padding-bottom: 1%;
+      }
+      .foot>span{
+        display: none;
       }
   
   

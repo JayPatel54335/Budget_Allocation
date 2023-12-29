@@ -3,12 +3,12 @@ import { FaEnvelope, FaGithub, FaLinkedin, FaLocationArrow } from 'react-icons/f
 import { Link } from 'react-router-dom'
 
 import './Home.css';
+import Navbar from '../Navbar';
 
 const Home = () => {
 
     return (
         <div className='strt'>
-            <div className='ssrt'></div>
             <link
                 href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
                 rel="stylesheet"
@@ -18,21 +18,25 @@ const Home = () => {
                 href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
             </link>
-            <div className='nav'>
-                <p className='thl'>Hello! User</p>
-            </div>
+            
+            <Navbar />
             <div className='main'>
-                <p><span>Welcome To Budget Allocation App <br /></span>
-                    A Budget Allocation Website is an online platform designed to help individuals,
-                    businesses, organizations, and government agencies efficiently manage their finances
-                    by allocating funds to various categories, projects, or expenses.
-                    This digital tool provides users with an organized and user-friendly interface to plan, track,
-                    and control their financial resources effectively.
-                    <br/>
-                </p>          
-                   <span className='cli'>Click on Lets'Go Button or use navbar to <b> Naviagte Budget Allocaion App.</b></span> 
+                <div className='perenttext'>
+                    <p className='childtext'><span><b>Welcome To Budget Allocation App <br /></b></span>
+                        A Budget Allocation Website is an online platform designed to help individuals,
+                        businesses, organizations, and government agencies efficiently manage their finances
+                        by allocating funds to various categories, projects, or expenses.
+                        This digital tool provides users with an organized and user-friendly interface to plan, track,
+                        and control their financial resources effectively.
+                        <br />
+                        <span className='cli'>Click on Lets'Go Button or use navbar to <b> Naviagte Budget Allocaion App.</b></span>
+                        <br />
+                        <div className="mbtt">
+                            <Link to='/Budget'><button className=' btn-warning'>Lets's Go</button> </Link>                            
+                            </div> 
+                    </p>
+                </div>
                 {/* <button  className=' btn-warning' onClick={budget}>Let's Go</button>  */}
-                <Link to='/Budget'><button className=' btn-warning'>Let's Go</button> </Link>
             </div>
             <div className='foo' id='About'>
                 <div className='aboutop'>
@@ -63,7 +67,8 @@ const Home = () => {
                         Gujarat-380060</div>
                     <div className='loc'>
                         <a className='FaLocationArrow'
-                            href='https://www.google.co.in/maps/place/SAL+EDUCATION/@23.0835632,72.4943061,18z/data=!4m6!3m5!1s0x395e9ce9f10b8a91:0xa8410c710a10a39c!8m2!3d23.083563!4d72.4956079!16s%2Fg%2F11f2xm_rgs?entry=ttu'><FaLocationArrow /></a>
+                            href='https://www.google.co.in/maps/place/SAL+EDUCATION/@23.0835632,72.4943061,18z/data=!4m6!3m5!1s0x395e9ce9f10b8a91:0xa8410c710a10a39c!8m2!3d23.083563!4d72.4956079!16s%2Fg%2F11f2xm_rgs?entry=ttu'>
+                            <FaLocationArrow  size={28} /></a>
                     </div>
                 </div>
             </div>

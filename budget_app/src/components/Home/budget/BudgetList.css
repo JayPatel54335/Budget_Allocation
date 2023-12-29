@@ -1,6 +1,5 @@
 .card {
-    width: 83%;
-    /* max-width: 600px; */
+    width: 83%;    
     margin: 0 auto;
     padding: 20px;
     background-color: #ffffff;
@@ -9,7 +8,6 @@
     box-shadow: 0px 0px 22px 0px #272829;
     color: black;
   }
-
 table {
     width: 100%;
     max-width: 100%;
@@ -17,54 +15,34 @@ table {
     margin-bottom: 16px;
     font-family: Arial, sans-serif;
 }
-
-/* Style the table header */
 th {
     background-color: #f2f2f2;
     padding: 10px;
     text-align: center;
-    font-weight: bold;
-    /* text-transform: uppercase; */
+    font-weight: bold;   
 }
-
-/* Style the table rows */
 tr {
     border-bottom: 1px solid #ccc;
     transition: background-color 0.3s ease;
     text-align: center;
 }
-
-
-
-
-/* Style the table cells */
 td {
     padding: 12px;
 }
-
-/* Style the "Remove" button */
 .rem {
     background-color: #ff4f4f;
     color: white;
     border: none;
     width: 100%;
-    height: 30px;
-    /* padding: 8px 16px; */
+    height: 30px; 
     cursor: pointer;
     border-radius: 4px;
     font-weight: bold;
-
 }
-
-
 @media screen and (max-width: 884px) {
-
-    /* On smaller screens, reduce padding for table cells */
     td {
         padding: 8px;
     }
-
-    /* Adjust width and height of the "Remove" button */
     .rem {
         padding: 1%;
         width: 95%;
@@ -86,7 +64,6 @@ td {
       font-size: 11px;
     }
   }
-
   @media screen and (max-width: 427px){
     .card{
         width: 98%;
@@ -98,17 +75,10 @@ td {
       padding: 4px;
     }
   }
-
-
-
-
 @media print {
     .act,.rem{
       display: none;
-    }
-    /* tr{
-        border-bottom: none;
-    }     */
+    }    
     .titelb{
         padding-bottom: 1%;
     }
@@ -117,5 +87,5 @@ td {
     }
     .act{
         width: 100%;
-    }
+    }    
   }

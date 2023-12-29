@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './Budget.css';
-// import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
 import BudgetList from './BudgetList';
 import { FaPrint, FaHome } from 'react-icons/fa';
@@ -8,12 +7,11 @@ import { Link } from 'react-router-dom';
 
 const Budget = () => {
   const [budgets, setBudgets] = useState([]);
+  const [name, setName] = useState('');
   const [title, setTitle] = useState('');
-
   const [amount, setAmount] = useState('');
   const [currency, setCurrency] = useState('₹');
   const [selectedDate, setSelectedDate] = useState(new Date());
-
 
   const addBudget = () => {
     if (title === null || title === "") {
@@ -24,21 +22,18 @@ const Budget = () => {
       alert('Amount cannot be empty');
       return;
     }
-    const newBudget = { title, amount, currency, date: selectedDate };
+    const newBudget = {name, title, amount, currency, date: selectedDate };
     setBudgets([...budgets, newBudget]);
+    setName('')
     setTitle('');
     setAmount('');
     setSelectedDate(new Date());
   };
-
   const removeBudget = (index) => {
     const updatedBudgets = [...budgets];
     updatedBudgets.splice(index, 1);
     setBudgets(updatedBudgets);
-  };
-  // const handleCurrencyChange = (newCurrency) => {
-  //   setCurrency(newCurrency);
-  // };
+  }; 
 
   const handlePrint = () => {
     window.print();
@@ -60,11 +55,10 @@ const Budget = () => {
         <div className='titelb'> Let's Manage Budget</div>
         <div className='mainc'>
           <div className="add-budget">
+            <input type='text' maxLength={20} placeholder='Name' value={name} onChange={(e) => setName(e.target.value)}></input>
             <input type="text" maxLength={30}
               value={title} onChange={(e) => setTitle(e.target.value)}
-              placeholder="Expanse Name" />
-
-            {/* amount */}
+              placeholder="Expanse Type" />            
             <input type="number"
               value={amount}
               onChange={handleAmountChange}
@@ -77,11 +71,6 @@ const Budget = () => {
               min={new Date().toISOString().split('T')[0]}
               onChange={(e) => handleDateChange(new Date(e.target.value))}              
               dateFormat="dd/MM/yyyy" ></input>
-            {/* <DatePicker className='custom-datepicker'
-              selected={selectedDate}
-              onChange={handleDateChange}
-              dateFormat="dd/MM/yyyy" 
-              /> */}
             <select value={currency} onChange={(e) => setCurrency(e.target.value)}>
               <option value="₹">₹(Rupee)</option>
               <option value="$">$(Dollar)</option>
@@ -91,10 +80,8 @@ const Budget = () => {
             </select>
             <button className='adb' onClick={addBudget}>Add Budget</button>
             <FaPrint className='pri' onClick={handlePrint} size={29}></FaPrint>
-
-
           </div>
-          <BudgetList budgets={budgets} currency={currency} onRemove={removeBudget} selectedDate={selectedDate}/>
+          <BudgetList name={name} budgets={budgets} currency={currency} onRemove={removeBudget} selectedDate={selectedDate}/>
         </div>
         <div className='foot'>Thanks for using Budget Allocation App<br/> 
         <span> Click home to return <b>Home page.</b> <br/> <Link to='/' className='a active'><FaHome/></Link></span></div>
@@ -102,5 +89,30 @@ const Budget = () => {
     </div>
   )
 }
-
 export default Budget;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            /* <DatePicker className='custom-datepicker'
+              selected={selectedDate}
+              onChange={handleDateChange}
+              dateFormat="dd/MM/yyyy" 
+              /> */

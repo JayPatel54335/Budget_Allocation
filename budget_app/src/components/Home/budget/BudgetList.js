@@ -1,15 +1,19 @@
 import React from 'react';
 import './BudgetList.css'
 
-const BudgetList = ({ budgets, onRemove,currency}) => {
+const BudgetList = ({ name, budgets, onRemove,currency}) => {
   const totalAmount = budgets.reduce((total, budget) => total +  parseFloat(budget.amount),0);
   return (
     <div className='card'>
       <div className='cbg'></div>
+      <div style={{fontSize:"2rem",fontFamily:"Arial", textTransform:"capitalize", fontWeight:"500", 
+    paddingBottom:"1%"}}>
+         {name}
+      </div>
     <table>
-    <thead>
+    <thead >
       <tr className='tt'>
-        <th>Expanse Name</th>
+        <th>Expanse Type</th>
         <th>Amount</th>
         {/* <th>Currency</th> */}
         <th>Expanse Date</th>
@@ -35,6 +39,7 @@ const BudgetList = ({ budgets, onRemove,currency}) => {
         </th>
         <th>{currency}{totalAmount}</th>
       </tr>
+    
     </tfoot>
   </table>
   </div>
